@@ -1,0 +1,434 @@
+
+  html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%; 
+    /* 1 rem = 10pc */
+
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-size: 1.6rem;
+    margin: 0;
+    background: linear-gradient(to bottom, #bab8b7, #dad8d7);
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    
+}
+
+
+  .main-content {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+
+
+.iniciar_session {
+  display: flex; 
+  flex-direction: column; 
+  padding: 1.5rem; 
+  background-color: white; 
+  border-radius: 10px; 
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1); 
+}
+
+
+  .navbar {
+    background-color: rgb(14, 213, 18);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    a{
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+      &:hover{
+          color: black;
+          transition: color 0.3s ease-in-out;
+      }
+  }
+  }
+
+  .footer {
+    background-color: rgb(14, 213, 18);
+    color: #e5dede;
+    padding: 1rem 2rem; /* Ajusté este padding, puedes modificarlo si prefieres los 5px del otro estilo */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    margin-top: 0rem; /* Se usó este valor en vez de -12rem para evitar conflicto */
+    text-align: center;
+    text-transform: capitalize;
+  }
+  
+
+  .navbar a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .titulo {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .enlaces {
+    display: flex;
+    gap: 4rem;
+    a{
+    border-radius: 5px;
+    align-items: center;
+    font-size: 26px;
+    transition: background-color 0.3s, transform 0.2s;
+    background-color: #000000;
+    &:hover{
+      transform: translate3d(2rem);
+      color: black;
+      transition: color 0.3s ease-in-out;
+      background-color: rgb(249, 253, 253);            
+      border-radius: 1rem;
+    }
+
+    }
+  }
+
+ 
+
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 80vh; 
+    overflow: hidden;
+}
+
+.hero_img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.overlay p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+
+
+.login-container {
+  position: relative; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin: 20rem ;  
+  padding: 2rem; 
+  border-radius: 5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); 
+  background-image: url('/img/imagen crear cuenta.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 800px; 
+}
+
+
+.login-container::before {
+  content: ''; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); 
+  border-radius: 5rem; 
+  z-index: 1; 
+}
+
+
+.iniciar_session {
+  position: relative;
+  background-color: white; 
+  padding: 2rem; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(200, 200, 200, 0.5); 
+  z-index: 2; 
+}
+
+.img_login img {
+  width: 70%; 
+  height: auto; 
+  z-index: 2; 
+  position: relative; 
+}
+
+
+
+
+.iniciar_session input {
+  margin-bottom: 1rem; 
+  padding: 0.75rem; 
+  border: 1px solid #ddd; 
+  border-radius: 5px;
+}
+
+
+.iniciar_session button {
+  padding: 0.75rem;
+  background-color: #4CAF50; 
+  color: white; 
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.iniciar_session button:hover {
+  background-color: #45a049; 
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem; 
+}
+
+input {
+    margin-bottom: 1rem; 
+    padding: 1rem; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      border: 1px solid #07bb0d;
+      box-shadow: 0px 0px 7px 7px rgba(200, 200, 200, 200);
+      transform: scale(1.05);
+      background-color: #57ed49;
+
+    }
+
+}
+
+button {
+    padding: 0.75rem; 
+    background-color: #07bb0d; 
+    color: rgb(255, 255, 255); 
+    border: none; 
+    border-radius: 5px; 
+    height: inherit;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+  }
+
+    
+/* crear cuenta */
+  .form_fondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    background-color: #f0f0f0;
+}
+
+.form_registro {
+  position: relative; 
+  background-color: rgb(30, 29, 29); 
+  padding: 25px;
+  border-radius: 8px;
+  width: 400px;
+  overflow: hidden;
+  color: white;
+}
+
+.form_registro::before {
+  content: ''; 
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  right: 0; 
+  bottom: 0; 
+  background-image: url('/img/imagen crear cuenta.jpeg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  opacity: 0.5; 
+  z-index: 1; 
+}
+
+
+.form_registro > * { 
+  position: relative; 
+  z-index: 2; 
+}
+
+
+
+
+
+.campoRegistro {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+.btn{
+  margin-top: 10px;
+  background-color: #07bb0d;
+}
+
+.frases{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.p{
+ height: 75rem;
+ display: flex;
+ justify-content: center;
+}
+
+.contenedor_instructor {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   
+}
+
+.contenedor_instructor h2 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.registro {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  color: #555;
+}
+
+.registro:last-child {
+  border-bottom: none;
+}
+
+.registro div {
+  flex: 1;
+  text-align: left;
+  color: #333;
+}
+
+.registro_cod::before {
+  content: "Identificación: ";
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.registro_nombre::before {
+  content: "Nombre: ";
+  font-weight: bold;
+  color: #2980b9;
+}
+
+.registro_edad::before {
+  content: "Edad: ";
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.registro_celular::before {
+  content: "Teléfono: ";
+  font-weight: bold;
+  color: #8e44ad;
+}
+
+.registro_email::before {
+  content: "Correo: ";
+  font-weight: bold;
+  color: #8e44ad;
+}
+
+.bienvenido{
+  text-align: center;
+  margin-top: -50rem;
+  height: 10rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+  
+ 
